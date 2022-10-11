@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Form</title>
+</head>
+
+<body>
+    <div class="container"><br>
+        <h1 class="text-info text-center">Get In Touch</h1><br>
+
+        <form class="row g-3 btn-lg bg-success" action="index.html" onsubmit="return validation()">
+            <div class="col-lg-6 form-group">
+                <label for="First Name" class="form-label">First Name
+                    <span id="First Name" class="text-danger"> *Required</span>
+                </label>
+                <input type="text" class="form-control" name="user" id="First" placeholder="Enter First Name">
+            </div>
+
+            <div class="col-lg-6 form-group">
+                <label for="Last Name" class="form-label">Last Name
+                    <span id="Last Name" class="text-danger">*Required</span>
+                </label>
+                <input type="text" class="form-control" name="user" id="Last" placeholder="Enter Last Name">
+            </div>
+
+            <div class="col-lg-6 form-group">
+                <label for="Email" class="form-label">Email
+                    <span class="text-danger" id="emails">*Required</span>
+                </label>
+                <input type="email" name="email" class="form-control" id="email" placeholder="abc@gmail.com" onkeyup="check()">
+                <div class="error">*Please enter a valid email ID</div>
+            </div>
+
+            <div class="col-lg-6 form-group">
+                <label for="Contact" class="form-label">Contact
+                    <span id="numbers" class="text-danger">*Required</span>
+                </label>
+                <input type="number" name="number" class="form-control" id="number" placeholder="(+91)123456789">
+            </div>
+            <div class="col-lg-12 form-group">
+                <label for="Company Name" class="form-label">Company Name</label>
+                <input type="text" name="text" class="form-control" id="Company">
+            </div>
+
+            <div class="col-lg-12 form-group-lg">
+                <label for="Comments" class="form-label">Comments</label>
+                <textarea class="form-control" id="Comments" rows="5"></textarea>
+            </div>
+            <div class="col-lg-12">
+                <button type="submit" class="btn btn-success">Submit</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        const email = document.querySelector("#email");
+        const error = document.querySelector(".error");
+        const btn = document.querySelector("button");
+        let regExp = /^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/;
+        function check(){
+            if(emial.value.match(regExp)){
+
+            }else{
+                alert("error");
+            }
+            if(email.value == ""){
+
+            }
+        }
+    </script>
+</body>
+</html>
